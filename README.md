@@ -39,12 +39,10 @@
 
 <a id="arch"></a>
 ## 🗺️ 시스템 구성도
+<img width="893" height="643" alt="image" src="https://github.com/user-attachments/assets/d18b129a-40f2-4357-b5e6-f48b9fc9b8a6" />
+
 > **Browser(HTML/CSS/JS)** → **PHP 서버(Apache)** → **MySQL**
 - 사용자/관리자 권한에 따라 기능 분리
-- 비회원도 구매 가능하도록 `session` 기반으로 장바구니/주문 데이터 관리
-
-(원하면 여기 다이어그램 이미지로 만들어서 넣어줄게)
-
 ---
 
 <a id="demo"></a>
