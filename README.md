@@ -31,8 +31,8 @@
     <th width="50%">상품 목록</th>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/<img width="2521" height="1317" alt="스크린샷 2025-12-27 205442" src="https://github.com/user-attachments/assets/453ce711-0a99-419d-9819-62dc269afe45" />
-main.png" width="430"/></td>
+    <td><img width="2521" height="1317" alt="스크린샷 2025-12-27 205442" src="https://github.com/user-attachments/assets/453ce711-0a99-419d-9819-62dc269afe45" />
+</td>
     <td><img src="docs/screenshots/product_list.png" width="430"/></td>
   </tr>
 
