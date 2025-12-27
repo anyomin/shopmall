@@ -72,18 +72,15 @@
 
 ---
 
-### 🖼️ 관리자 기능
 
-**주문 내역 조회 | 회원 목록 조회**
+### 🖼️ 관리자 화면
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/0ddb17d7-5ad3-4b91-9d01-2d1b3d1a28b4" width="49%"/>
-  <img src="https://github.com/user-attachments/assets/84e4230e-2492-451a-992f-272d54d9b3c9" width="49%"/>
+  <img src="https://github.com/user-attachments/assets/0ddb17d7-5ad3-4b91-9d01-2d1b3d1a28b4" width="420" />
+  <img src="https://github.com/user-attachments/assets/84e4230e-2492-451a-992f-272d54d9b3c9" width="420" />
 </p>
-
-**상품 등록 | 상품 리스트**
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/880908b2-89eb-4f4b-9e66-8a9b5176b522" width="49%"/>
-  <img src="https://github.com/user-attachments/assets/8d99b556-05ba-4ba6-92c4-23ce4a47aa4b" width="49%"/>
+  <img src="https://github.com/user-attachments/assets/880908b2-89eb-4f4b-9e66-8a9b5176b522" width="420" />
+  <img src="https://github.com/user-attachments/assets/8d99b556-05ba-4ba6-92c4-23ce4a47aa4b" width="420" />
 </p>
 
 ---
