@@ -50,30 +50,24 @@
 <a id="demo"></a>
 ## 🖼️ 핵심 기능 스크린샷
 
-### 🖼️ 사용자 기능
+### 🖼️ 사용자 화면
+> ⚠️ 이미지 크기가 다르면 “표”가 깨져 보일 수 있어서, **width만 통일**하는 방식 추천 (height 제거)
 
-**메인/이벤트 배너 | 상품 목록**
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/453ce711-0a99-419d-9819-62dc269afe45" width="49%"/>
-  <img src="https://github.com/user-attachments/assets/e5ef22a0-0838-4c95-a356-6db2c08a3f88" width="49%"/>
+  <img src="https://github.com/user-attachments/assets/453ce711-0a99-419d-9819-62dc269afe45" width="420" />
+  <img src="https://github.com/user-attachments/assets/e5ef22a0-0838-4c95-a356-6db2c08a3f88" width="420" />
 </p>
-
-**상품 상세 | 후기 목록/상세**
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d8a0e8c1-be80-4ab3-b64e-84222aaa8e45" width="49%"/>
-  <img src="https://github.com/user-attachments/assets/b6908ce6-dca9-4954-934c-3487bb3d3b69" width="49%"/>
+  <img src="https://github.com/user-attachments/assets/d8a0e8c1-be80-4ab3-b64e-84222aaa8e45" width="420" />
+  <img src="https://github.com/user-attachments/assets/b6908ce6-dca9-4954-934c-3487bb3d3b69" width="420" />
 </p>
-
-**장바구니 | 주문/결제**
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/70affbfa-0f80-4a07-b46a-4646c926c586" width="49%"/>
-  <img src="https://github.com/user-attachments/assets/f677bfb7-3cd4-4dc1-8591-319511b0b548" width="49%"/>
+  <img src="https://github.com/user-attachments/assets/70affbfa-0f80-4a07-b46a-4646c926c586" width="420" />
+  <img src="https://github.com/user-attachments/assets/f677bfb7-3cd4-4dc1-8591-319511b0b548" width="420" />
 </p>
-
-**주문 완료 | 마이페이지/주문내역**
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/31daddf7-8ffe-45f0-9daa-7883799180f2" width="49%"/>
-  <img src="https://github.com/user-attachments/assets/1da83a59-bc20-46cb-aaca-b528a8dd1b62" width="49%"/>
+  <img src="https://github.com/user-attachments/assets/31daddf7-8ffe-45f0-9daa-7883799180f2" width="420" />
+  <img src="https://github.com/user-attachments/assets/1da83a59-bc20-46cb-aaca-b528a8dd1b62" width="420" />
 </p>
 
 ---
