@@ -79,17 +79,21 @@
     <th width="50%">회원 목록 조회</th>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/admin_orders.png" width="430"/></td>
-    <td><img src="docs/screenshots/admin_members.png" width="430"/></td>
+    <td><img width="569" height="305" alt="image" src="https://github.com/user-attachments/assets/0ddb17d7-5ad3-4b91-9d01-2d1b3d1a28b4" />
+</td>
+    <td><img width="569" height="332" alt="image" src="https://github.com/user-attachments/assets/84e4230e-2492-451a-992f-272d54d9b3c9" />
+</td>
   </tr>
 
   <tr>
     <th>상품 등록</th>
-    <th>상품 관리/리스트</th>
+    <th>상품리스트</th>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/admin_add_product.png" width="430"/></td>
-    <td><img src="docs/screenshots/admin_products.png" width="430"/></td>
+    <td><img width="569" height="442" alt="image" src="https://github.com/user-attachments/assets/880908b2-89eb-4f4b-9e66-8a9b5176b522" />
+</td>
+    <td><img width="403" height="261" alt="image" src="https://github.com/user-attachments/assets/8d99b556-05ba-4ba6-92c4-23ce4a47aa4b" />
+</td>
   </tr>
 </table>
 
