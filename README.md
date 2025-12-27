@@ -42,7 +42,8 @@
   </tr>
   <tr>
     <td><img src="docs/screenshots/product_detail.png" width="430"/></td>
-    <td><img src="docs/screenshots/review_list.png" width="430"/></td>
+    <td><img width="542" height="233" alt="image" src="https://github.com/user-attachments/assets/099d2273-17c0-4c35-931b-6fcafdbe29ce" />
+</td>
   </tr>
 
   <tr>
@@ -60,7 +61,8 @@
   </tr>
   <tr>
     <td><img src="docs/screenshots/order_done.png" width="430"/></td>
-    <td><img src="docs/screenshots/mypage.png" width="430"/></td>
+    <td><img width="569" height="386" alt="image" src="https://github.com/user-attachments/assets/1da83a59-bc20-46cb-aaca-b528a8dd1b62" />
+</td>
   </tr>
 </table>
 
