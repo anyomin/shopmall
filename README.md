@@ -18,7 +18,7 @@
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: PHP
 - **DB**: MySQL
-- **Server/Etc**: (Apache/Apmsetup 등 네 환경에 맞게 작성), Session 기반 로그인/비회원 처리
+- **Server/Etc**:Apmsetup
 
 ---
 
@@ -51,9 +51,7 @@
 ## 🎥 데모 영상 & 🖼️ 핵심 기능 스크린샷
 
 ### 🎥 데모 영상
-> (영상 있으면 링크/썸네일로 추가)
-- Demo: (URL)
-
+> https://youtu.be/liQU0w7clNk?si=Ch4LjOHU733DnQEZ
 ---
 
 ### 🖼️ 사용자 기능
