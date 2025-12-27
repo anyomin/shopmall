@@ -1,0 +1,608 @@
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+#menu { /*The problem in on line 46*/
+   background-color: white;
+   width: 200px;
+   height: 50px;
+   color: black;
+   font-family: "Trebuchet MS";
+   font-weight: bold;
+   font-size: 18px;
+	position:relative;
+	margin-top:-28px;
+	
+}
+
+
+.menulist {
+   list-style-type: none;
+   padding-left: 0px;
+  
+   
+  
+   position:absolute;
+   z-index:2;
+}
+
+ul.menulist li {
+   display: inline;
+   padding: 33px 65px 28px 65px;
+    border: 0;
+   cursor: pointer;
+
+ 
+	
+}
+
+ul.menulist li:hover {
+   background-color: #DDB9AE;
+   opacity(0.8);
+}
+
+a.menulinks {
+   color:#947C77;
+   text-decoration: none;
+   text-indent: -5px;
+    font-size:15px;
+}
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color:white;
+   min-width: 176px;
+   margin-top: 10px;
+   z-index: 2;
+   top:40px;
+	font-size:15px;
+   
+  /*is there a property or animation that I can put here to reverse the animation once I mouse off of it?*/
+   animation-name: dropdown-slide;
+   animation-duration: 500ms;
+   animation-direction: normal; /*animation-direction doesn't work*/
+}
+
+@keyframes dropdown-slide
+{
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dropdown-content a {
+   color:#947C77;
+   padding: 25px 45px;
+   margin-top:-2px;
+   text-decoration: none;
+   display: block;
+   z-index: 2;
+   font-size:15px;
+}
+
+.dropdown-content a:hover {
+   background-color: #DDB9AE ;
+
+}
+
+li#menutab:hover .dropdown-content {
+   display: block;
+}
+.notice_list{
+  list-style-type: none;
+  
+    padding-bottom: 13px;
+   position:absolute;
+   top:0px;
+   right:0px;
+	}
+	.notice_list > li{
+   float: right;
+   border-right:1px solid #e0e0e0;
+	font-size:19px;
+   padding:0px 20px;
+
+   
+	}
+	.notice_list > li > a {
+	color:gray;
+	}
+.search {
+  position: relative;
+  padding:5px;
+  width: 300px;
+  
+}
+
+input.search1 {
+  width: 100%;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 9px 9px;
+  font-size: 14px;
+}
+
+
+.cart{
+ position:absolute;
+ right:40px;top:185px;
+ z-index:9999;
+ font-size:40px;
+ color:pink;
+}
+*{
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+.hamburger input[type="checkbox"]{
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    display: block;
+    z-index: 3;
+    opacity: 0;
+    cursor: pointer;
+	margin-left:35px;
+}
+
+.hamburgerlines{
+    width: 42px;
+    height: 32px;
+    position: absolute;
+    top: 8px;
+    left: 7px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	
+}
+
+.hamburgerlines .lines{
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #DDB9AE;
+    border-radius: 10px;
+	padding-right:10px;
+	margin-left:35px;
+}
+
+.hamburger{
+    position: absolute;
+	left:0;
+	z-index:5;
+	top:180px;
+	
+	width:300px;
+	
+}
+
+.menu-items{
+    padding-top: 110px;
+    transform: translate(-110%);
+    transition: transform 0.25s ease-in-out;
+   
+	 padding-top: 30px;
+    background: #fff;
+    margin-top: 67px;
+    padding-bottom: 1rem;
+    max-width: 300px;
+    width: 100%;
+    opacity: 0.9;
+    
+}
+
+.menu-items li{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+.menu-items a{
+	color:gray;
+	text-decoration:none;
+	
+}
+.menu-items a:hover{
+	color:black;
+	font-weight:bold;
+	text-decoration:none;
+	background:lightgray;
+	border-radius:5px;
+	
+}
+.hamburger input[type="checkbox"]:checked ~ .menu-items{
+    display: block;
+    transform: translate(0%);
+    background: white;
+    
+}
+
+.hamburger input[type="checkbox"]:checked ~ .hamburgerlines .lines{
+    background:#947C77;
+}
+
+.hamburgerlines .line1{
+   transform-origin: 0% 0%;
+   transition: transform 0.3s ease-in-out;    
+}
+
+.hamburgerlines .line3{ 
+   transform-origin: 0% 100%;
+   transition: transform 0.3s ease-in-out;  
+}
+
+.hamburger input[type="checkbox"]:checked ~ .hamburgerlines .line1{
+    transform: rotate(45deg);
+}
+
+.hamburger input[type="checkbox"]:checked ~ .hamburgerlines .line2{
+    display: none;
+}
+
+
+.hamburger input[type="checkbox"]:checked ~ .hamburgerlines .line3{
+    transform: rotate(-45deg);
+}
+
+</style>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+ <script src="https:kit.fontawesome.com/acfe1c41fb.js" crossorigin="anonymous"></script>
+ <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+</head>
+<? if (!$UserID) { ?>
+<body style="margin:0px; padding:0px;">
+<form method=post action=search.php>
+<div class="search"> 
+  <input class='search1' type=text placeholder="°Ë»ö¾î ÀÔ·Â" name='key'>
+  <button style='position:absolute;left:250px;top:10px;z-index:3;width:23px;background-color:white;border:0;cursor:pointer;'  ><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" style='width:23px;position:absolute;top:3;' ></button>
+</div>
+</form>
+  <h1 align=center style='margin-top:30px; right:730px;font-family:Raleway, sans-serif; font-size:42px;'><a href="main.html" style='text-decoration:none;color:black;'>ALMOND</a></h1>
+<hr style='position:absolute; background-color:#DDB9AE;border:0; height:5px;  width:100%; top:150px;' ></hr>
+
+<div class="hamburger">
+        <input type="checkbox">
+        <div class="hamburgerlines">
+            <span class="lines line1">
+
+            </span>
+            <span class="lines line2">
+
+            </span>
+            <span class="lines line3">
+
+            </span>
+        </div>
+        <ul class="menu-items">
+            <li><a href="main.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </div>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:300px;'> <!--The menu bar-->
+   <ul class='menulist' > <!--The list in the menu which has the tabs-->
+      <li id='menutab' > <!--One of the tabs-->
+         <a href='p-list.php?class=0&mode=0' class='menulinks' >º£½ºÆ®</a> <!--The tab text-->
+		 
+      </li>
+   </ul>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:477px;'> <!--The menu bar-->
+   <ul class='menulist'> <!--The list in the menu which has the tabs-->
+      <li id='menutab'> <!--One of the tabs-->
+         <a  href='p-list.php?class=1&mode=5&classname=¸ñ°ÉÀÌ' class='menulinks'> ¸ñ°ÉÀÌ</a> <!--The tab text-->
+         <div class='dropdown-content'> <!--The dropdown menu with all the links-->
+              <a href='p-list2.php?class2=1&mode=5&classname=¸ñ°ÉÀÌ&class2name=ÁøÁÖ ¸ñ°ÉÀÌ'>ÁøÁÖ ¸ñ°ÉÀÌ</a>
+              <a href='p-list2.php?class2=2&mode=5&classname=¸ñ°ÉÀÌ&class2name=µÎÁÙ ¸ñ°ÉÀÌ'>µÎÁÙ ¸ñ°ÉÀÌ</a>
+              <a href='p-list2.php?class2=3&mode=5&classname=¸ñ°ÉÀÌ&class2name=½ÉÇÃ ¸ñ°ÉÀÌ'>½ÉÇÃ ¸ñ°ÉÀÌ</a>
+         </div>
+      </li>
+   </ul>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:653px;'> <!--The menu bar-->
+   <ul class='menulist'> <!--The list in the menu which has the tabs-->
+      <li id='menutab'  style='width:500px;'> <!--One of the tabs-->
+         <a href='p-list.php?class=2&mode=5&classname=±Í°ÉÀÌ' class='menulinks'>±Í°ÉÀÌ</a> <!--The tab text-->
+         <div class='dropdown-content'> <!--The dropdown menu with all the links-->
+            <a href='p-list2.php?class2=4&mode=5&classname=±Í°ÉÀÌ&class2name=ÁøÁÖ ±Í°ÉÀÌ'>ÁøÁÖ ±Í°ÉÀÌ</a>
+            <a href='p-list2.php?class2=5&mode=5&classname=±Í°ÉÀÌ&class2name=Å¥ºò ±Í°ÉÀÌ'>Å¥ºò ±Í°ÉÀÌ</a>
+            <a href='p-list2.php?class2=6&mode=5&classname=±Í°ÉÀÌ&class2name=¸µ ¸ñ°ÉÀÌ'>¸µ ±Í°ÉÀÌ</a>
+         </div>
+      </li>
+   </ul>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:830px;'> <!--The menu bar-->
+
+   <ul class='menulist' > <!--The list in the menu which has the tabs-->
+      <li id='menutab' > <!--One of the tabs-->
+         <a href='p-list.php?class=3&mode=5&classname=ÆÈÂî'class='menulinks' >&nbsp;ÆÈÂî&nbsp;</a> 
+		 <div class='dropdown-content'> <!--The dropdown menu with all the links-->
+            <a href='p-list2.php?class2=7&mode=5&classname=ÆÈÂî&class2name=ÇÑÁÙ ÆÈÂî'>ÇÑÁÙ ÆÈÂî</a>
+            <a href='p-list2.php?class2=8&mode=5&classname=ÆÈÂî&class2name=µÎÁÙ ÆÈÂî'>µÎÁÙ ÆÈÂî</a>
+            <a href='p-list2.php?class2=9&mode=5&classname=ÆÈÂî&class2name=¹ð±Û ÆÈÂî'>¹ð±Û ÆÈÂî</a>
+         </div><!--The tab text-->
+      </li>
+   </ul>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:1000px;'> <!--The menu bar-->
+
+   <ul class='menulist' > <!--The list in the menu which has the tabs-->
+      <li id='menutab' > <!--One of the tabs-->
+         <a href='p-list.php?class=4&mode=5&classname=¹ÝÁö' class='menulinks' >&nbsp;¹ÝÁö&nbsp;</a> <!--The tab text-->
+		<div class='dropdown-content'> <!--The dropdown menu with all the links-->
+            <a href='p-list2.php?class2=10&mode=5&classname=¹ÝÁö&class2name=½ÉÇÃ ¹ÝÁö'>½ÉÇÃ ¹ÝÁö</a>
+            <a href='p-list2.php?class2=11&mode=5&classname=¹ÝÁö&class2name=Å¥ºò ¹ÝÁö'>Å¥ºò ¹ÝÁö</a>
+            
+         </div>   
+	 </li>
+   </ul>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:1170px;'> <!--The menu bar-->
+
+   <ul class='menulist' > <!--The list in the menu which has the tabs-->
+      <li id='menutab' > <!--One of the tabs-->
+         <a href='p-list.php?class=5&mode=5&classname=¼¼Æ®' class='menulinks' >¼¼Æ®</a> <!--The tab text-->
+			
+      </li>
+   </ul>
+</div>
+<div class='cart'><a href="showbag.php" style=' text-decoration: none;color:#DDB9AE;'><i class="fa-solid fa-bag-shopping"></i></a></div>
+<hr style='position:absolute;background-color:#DDB9AE;border:0; height:5px;  width:100%; top:235px;' ></hr>
+		<div class='l_top' style='width:270px;'>
+		<ul class='notice_list' style='width:100%; border-bottom:1px solid;'>
+				
+				
+				<li><a href="showbag.php" style=' text-decoration: none;'>CART</a></li>
+				<li><a href="login.html" style=' text-decoration: none;'>LOGIN</a></li> 
+				<li><a href="join.html" style=' text-decoration: none;'>JOIN US</a></li>
+		</ul>			
+		</div>
+
+ 
+</body>
+<? } else if ($UserID=="admin") { ?> 
+
+<body style="margin:0px; padding:0px;">
+<form method=post action=search.php>
+<div class="search"> 
+  <input class='search1' type=text placeholder="°Ë»ö¾î ÀÔ·Â" name='key'>
+  <button style='position:absolute;left:250px;top:10px;z-index:3;width:23px;background-color:white;border:0;cursor:pointer;'  ><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" style='width:23px;position:absolute;top:3;' ></button>
+</div>
+</form>
+  <h1 align=center style='margin-top:30px; right:730px;font-family:Raleway, sans-serif; font-size:42px;'><a href="main.html" style='text-decoration:none;color:black;'>ALMOND</a></h1>
+<hr style='position:absolute;background-color:#DDB9AE;border:0; height:5px;  width:100%; top:150px;' ></hr>
+
+<div class="hamburger">
+        <input type="checkbox">
+        <div class="hamburgerlines">
+            <span class="lines line1">
+
+            </span>
+            <span class="lines line2">
+
+            </span>
+            <span class="lines line3">
+
+            </span>
+        </div>
+        <ul class="menu-items">
+            <li><a href="main.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="logout.php">Log Out</a></li>
+        </ul>
+    </div>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:300px;'> <!--The menu bar-->
+   <ul class='menulist' > <!--The list in the menu which has the tabs-->
+      <li id='menutab' > <!--One of the tabs-->
+         <a href='p-list.php?class=0&mode=0' class='menulinks' >º£½ºÆ®</a> <!--The tab text-->
+		 
+      </li>
+   </ul>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:477px;'> <!--The menu bar-->
+   <ul class='menulist'> <!--The list in the menu which has the tabs-->
+      <li id='menutab'> <!--One of the tabs-->
+         <a  href='p-list.php?class=1&mode=5&classname=¸ñ°ÉÀÌ' class='menulinks'> ¸ñ°ÉÀÌ</a> <!--The tab text-->
+         <div class='dropdown-content'> <!--The dropdown menu with all the links-->
+              <a href='p-list2.php?class2=1&mode=5&classname=¸ñ°ÉÀÌ&class2name=ÁøÁÖ ¸ñ°ÉÀÌ'>ÁøÁÖ ¸ñ°ÉÀÌ</a>
+              <a href='p-list2.php?class2=2&mode=5&classname=¸ñ°ÉÀÌ&class2name=µÎÁÙ ¸ñ°ÉÀÌ'>µÎÁÙ ¸ñ°ÉÀÌ</a>
+              <a href='p-list2.php?class2=3&mode=5&classname=¸ñ°ÉÀÌ&class2name=½ÉÇÃ ¸ñ°ÉÀÌ'>½ÉÇÃ ¸ñ°ÉÀÌ</a>
+         </div>
+      </li>
+   </ul>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:653px;'> <!--The menu bar-->
+   <ul class='menulist'> <!--The list in the menu which has the tabs-->
+      <li id='menutab'  style='width:500px;'> <!--One of the tabs-->
+         <a href='p-list.php?class=2&mode=5&classname=±Í°ÉÀÌ' class='menulinks'>±Í°ÉÀÌ</a> <!--The tab text-->
+         <div class='dropdown-content'> <!--The dropdown menu with all the links-->
+            <a href='p-list2.php?class2=4&mode=5&classname=±Í°ÉÀÌ&class2name=ÁøÁÖ ±Í°ÉÀÌ'>ÁøÁÖ ±Í°ÉÀÌ</a>
+            <a href='p-list2.php?class2=5&mode=5&classname=±Í°ÉÀÌ&class2name=Å¥ºò ±Í°ÉÀÌ'>Å¥ºò ±Í°ÉÀÌ</a>
+            <a href='p-list2.php?class2=6&mode=5&classname=±Í°ÉÀÌ&class2name=¸µ ¸ñ°ÉÀÌ'>¸µ ±Í°ÉÀÌ</a>
+         </div>
+      </li>
+   </ul>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:830px;'> <!--The menu bar-->
+
+   <ul class='menulist' > <!--The list in the menu which has the tabs-->
+      <li id='menutab' > <!--One of the tabs-->
+         <a href='p-list.php?class=3&mode=5&classname=ÆÈÂî'class='menulinks' >&nbsp;ÆÈÂî&nbsp;</a> 
+		 <div class='dropdown-content'> <!--The dropdown menu with all the links-->
+            <a href='p-list2.php?class2=7&mode=5&classname=ÆÈÂî&class2name=ÇÑÁÙ ÆÈÂî'>ÇÑÁÙ ÆÈÂî</a>
+            <a href='p-list2.php?class2=8&mode=5&classname=ÆÈÂî&class2name=µÎÁÙ ÆÈÂî'>µÎÁÙ ÆÈÂî</a>
+            <a href='p-list2.php?class2=9&mode=5&classname=ÆÈÂî&class2name=¹ð±Û ÆÈÂî'>¹ð±Û ÆÈÂî</a>
+         </div><!--The tab text-->
+      </li>
+   </ul>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:1000px;'> <!--The menu bar-->
+
+   <ul class='menulist' > <!--The list in the menu which has the tabs-->
+      <li id='menutab' > <!--One of the tabs-->
+         <a href='p-list.php?class=4&mode=5&classname=¹ÝÁö' class='menulinks' >&nbsp;¹ÝÁö&nbsp;</a> <!--The tab text-->
+		<div class='dropdown-content'> <!--The dropdown menu with all the links-->
+            <a href='p-list2.php?class2=10&mode=5&classname=¹ÝÁö&class2name=½ÉÇÃ ¹ÝÁö'>½ÉÇÃ ¹ÝÁö</a>
+            <a href='p-list2.php?class2=11&mode=5&classname=¹ÝÁö&class2name=Å¥ºò ¹ÝÁö'>Å¥ºò ¹ÝÁö</a>
+            
+         </div>   
+	 </li>
+   </ul>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:1170px;'> <!--The menu bar-->
+
+   <ul class='menulist' > <!--The list in the menu which has the tabs-->
+      <li id='menutab'  > <!--One of the tabs-->
+         <a href='p-list.php?class=5&mode=5&classname=¼¼Æ®' class='menulinks' >¼¼Æ®</a> <!--The tab text-->
+	
+      </li>
+   </ul>
+</div>
+<hr style='position:absolute;background-color:#DDB9AE;border:0; height:5px;  width:100%; top:235px;' ></hr>
+		<div class='l_top' style='width:270px;'>
+		<ul class='notice_list' style='width:100%; border-bottom:1px solid;'>
+				<li><a href="p-adminlist.php" style=' text-decoration: none;'>ADMIN</a></li>
+				<li><a href="logout.php" style=' text-decoration: none;'>LOGOUT</a></li>
+				
+				
+				
+		</ul>			
+		</div>
+
+ 
+</body>
+
+
+<? } else {  ?>
+
+<body style="margin:0px; padding:0px;">
+<form method=post action=search.php>
+<div class="search"> 
+  <input class='search1' type=text placeholder="°Ë»ö¾î ÀÔ·Â" name='key'>
+  <button style='position:absolute;left:250px;top:10px;z-index:3;width:23px;background-color:white;border:0;cursor:pointer;'  ><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" style='width:23px;position:absolute;top:3;' ></button>
+</div>
+</form>
+  <h1 align=center style='margin-top:30px; font-family:Raleway, sans-serif; font-size:42px;'><a href="main.html" style='text-decoration:none;color:black;'>ALMOND</a></h1>
+<hr style='position:absolute; background-color:#DDB9AE;border:0; height:5px; width:100%; top:150px;' ></hr>
+
+<div class="hamburger">
+        <input type="checkbox">
+        <div class="hamburgerlines">
+            <span class="lines line1">
+
+            </span>
+            <span class="lines line2">
+
+            </span>
+            <span class="lines line3">
+
+            </span>
+        </div>
+        <ul class="menu-items">
+            <li><a href="main.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="logout.php">Log Out</a></li>
+        </ul>
+    </div>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:300px;'> <!--The menu bar-->
+   <ul class='menulist' > <!--The list in the menu which has the tabs-->
+      <li id='menutab' > <!--One of the tabs-->
+         <a href='p-list.php?class=0&mode=0' class='menulinks' >º£½ºÆ®</a> <!--The tab text-->
+		 
+      </li>
+   </ul>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:477px;'> <!--The menu bar-->
+   <ul class='menulist'> <!--The list in the menu which has the tabs-->
+      <li id='menutab'> <!--One of the tabs-->
+         <a  href='p-list.php?class=1&mode=5&classname=¸ñ°ÉÀÌ' class='menulinks'> ¸ñ°ÉÀÌ</a> <!--The tab text-->
+         <div class='dropdown-content'> <!--The dropdown menu with all the links-->
+              <a href='p-list2.php?class2=1&mode=5&classname=¸ñ°ÉÀÌ&class2name=ÁøÁÖ ¸ñ°ÉÀÌ'>ÁøÁÖ ¸ñ°ÉÀÌ</a>
+              <a href='p-list2.php?class2=2&mode=5&classname=¸ñ°ÉÀÌ&class2name=µÎÁÙ ¸ñ°ÉÀÌ'>µÎÁÙ ¸ñ°ÉÀÌ</a>
+              <a href='p-list2.php?class2=3&mode=5&classname=¸ñ°ÉÀÌ&class2name=½ÉÇÃ ¸ñ°ÉÀÌ'>½ÉÇÃ ¸ñ°ÉÀÌ</a>
+         </div>
+      </li>
+   </ul>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:653px;'> <!--The menu bar-->
+   <ul class='menulist'> <!--The list in the menu which has the tabs-->
+      <li id='menutab'  style='width:500px;'> <!--One of the tabs-->
+         <a href='p-list.php?class=2&mode=5&classname=±Í°ÉÀÌ' class='menulinks'>±Í°ÉÀÌ</a> <!--The tab text-->
+         <div class='dropdown-content'> <!--The dropdown menu with all the links-->
+            <a href='p-list2.php?class2=4&mode=5&classname=±Í°ÉÀÌ&class2name=ÁøÁÖ ±Í°ÉÀÌ'>ÁøÁÖ ±Í°ÉÀÌ</a>
+            <a href='p-list2.php?class2=5&mode=5&classname=±Í°ÉÀÌ&class2name=Å¥ºò ±Í°ÉÀÌ'>Å¥ºò ±Í°ÉÀÌ</a>
+            <a href='p-list2.php?class2=6&mode=5&classname=±Í°ÉÀÌ&class2name=¸µ ¸ñ°ÉÀÌ'>¸µ ±Í°ÉÀÌ</a>
+         </div>
+      </li>
+   </ul>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:830px;'> <!--The menu bar-->
+
+   <ul class='menulist' > <!--The list in the menu which has the tabs-->
+      <li id='menutab' > <!--One of the tabs-->
+         <a href='p-list.php?class=3&mode=5&classname=ÆÈÂî'class='menulinks' >&nbsp;ÆÈÂî&nbsp;</a> 
+		 <div class='dropdown-content'> <!--The dropdown menu with all the links-->
+            <a href='p-list2.php?class2=7&mode=5&classname=ÆÈÂî&class2name=ÇÑÁÙ ÆÈÂî'>ÇÑÁÙ ÆÈÂî</a>
+            <a href='p-list2.php?class2=8&mode=5&classname=ÆÈÂî&class2name=µÎÁÙ ÆÈÂî'>µÎÁÙ ÆÈÂî</a>
+            <a href='p-list2.php?class2=9&mode=5&classname=ÆÈÂî&class2name=¹ð±Û ÆÈÂî'>¹ð±Û ÆÈÂî</a>
+         </div><!--The tab text-->
+      </li>
+   </ul>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:1000px;'> <!--The menu bar-->
+
+   <ul class='menulist' > <!--The list in the menu which has the tabs-->
+      <li id='menutab' > <!--One of the tabs-->
+         <a href='p-list.php?class=4&mode=5&classname=¹ÝÁö' class='menulinks' >&nbsp;¹ÝÁö&nbsp;</a> <!--The tab text-->
+		<div class='dropdown-content'> <!--The dropdown menu with all the links-->
+            <a href='p-list2.php?class2=10&mode=5&classname=¹ÝÁö&class2name=½ÉÇÃ ¹ÝÁö'>½ÉÇÃ ¹ÝÁö</a>
+            <a href='p-list2.php?class2=11&mode=5&classname=¹ÝÁö&class2name=Å¥ºò ¹ÝÁö'>Å¥ºò ¹ÝÁö</a>
+            
+         </div>   
+	 </li>
+   </ul>
+</div>
+<div id='menu' style='position:absolute; top:205px; left:1170px;'> <!--The menu bar-->
+
+   <ul class='menulist' > <!--The list in the menu which has the tabs-->
+      <li id='menutab' > <!--One of the tabs-->
+         <a href='p-list.php?class=5&mode=5&classname=¼¼Æ®' class='menulinks' >¼¼Æ®</a> <!--The tab text-->
+			
+      </li>
+   </ul>
+</div>
+<div class='cart'><a href="showbag.php" style=' text-decoration: none;color:#DDB9AE;'><i class="fa-solid fa-bag-shopping"></i></a></div>
+<hr style='position:absolute;background-color:#DDB9AE;border:0; height:5px; width:100%; top:235px;' ></hr>
+		<div class='l_top' style='width:270px;'>
+		<ul class='notice_list' style='width:100%; border-bottom:1px solid;'>
+				<li><a href="my.php?" style=' text-decoration: none;'>MY</a></li>
+				<li><a href="showbag.php" style=' text-decoration: none;'>CART</a></li>
+				<li><a href="logout.php" style=' text-decoration: none;'>LOGOUT</a></li> 
+				
+		</ul>			
+		</div>
+</body><? } ?>
+</html>

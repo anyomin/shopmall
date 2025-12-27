@@ -1,0 +1,73 @@
+<style>
+#button{
+	color:white;
+	background-color:black;
+	border:0;
+}
+#button:hover{
+	color:black;
+	background-color:gray;
+	border:0;
+}
+.click2:hover
+{	border-radius:5px;
+	background-color:gray;
+	border:0;
+	height:40px;
+	width:110px;	
+	transition:0.3s;
+	
+}
+.click2
+{	border-radius:5px;
+	background-color:white;
+	border:1px solid gray;
+	height:40px;
+	width:110px;
+	
+}
+.click3:hover
+{	border-radius:5px;
+	background-color:gray;
+	border:0;
+	height:40px;
+	width:200px;	
+	transition:0.3s;
+	
+}
+.click3
+{	border-radius:5px;
+	background-color:white;
+	border:1px solid gray;
+	height:40px;
+	width:200px;
+	
+}
+.t{
+border-bottom:2px solid;}
+</style>
+
+<? include "top.html"; ?>
+
+<table width=750 style='border-bottom:5px solid black;margin-top:250px;padding-bottom:15px;' cellspacing=0 cellpadding=0 border=0  align=center>
+<tr align=left><td><font size=6>회원 로그인</font> <sub>회원으로 로그인 하시면 편리한 쇼핑이 가능합니다.</td></tr>
+</table>
+<form method=post action=login.php onsubmit="if(!this.uid.value || !this.upass.value)   return false;">
+<table border=0 style='border-bottom:5px solid black;margin-top:10px;padding-bottom:15px;' align=center width=750>
+
+		<tr><td align=center width=250><font size=4>아이디</font> </td><td><input type=text size=20 name=uid ></td></tr>
+		<tr><td align=center><font size=4>비밀번호</font> </td><td><input type=password size=20  name=upass ></td></tr>
+<tr><td></td><td  ><input id='button' type=submit value=로그인 style='width:200px;height:40px;border-radius:5px;'></td><td width=200><button class='click3'><a href='borderlist.php' style='text-decoration:none;color:black;'>비회원주문조회</a></button></td></tr></table>
+<table border=0 style='margin-top:10px;padding-bottom:15px;' align=center width=750>
+<tr ><td><button class='click2'><a href='join.html' style='text-decoration:none;color:black;' >회원가입</a></button></td>
+	<td align=right><button class='click2'><a href='findidpw.php' style='text-decoration:none;color:black;'>아이디찾기</a></button>
+	<button class='click2'><a href='findidpw.php' style='text-decoration:none;color:black;' >비밀번호찾기</a></button></td></tr>
+	<tr><td align=right></td></tr>
+</form>
+</table>
+</td></tr>
+</table>
+
+<?include ("bottom.html");?>
+
+

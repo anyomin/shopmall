@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+	
+*{
+    box-sizing: border-box;
+}
+
+
+	  html,
+      body {
+        position: relative;
+		width:100%;
+		z-index:-1;
+      }
+
+      body {
+       
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+		z-index:-1;
+		position:absolute;
+		
+      }
+
+
+      .swiper {
+	    margin-top:5%;
+		
+        width: 95%;
+        height: 450px;
+		z-index:2;
+		position:relative;
+		
+		
+		
+      }
+
+      .swiper-slide {
+	  
+        text-align: center;
+	
+		border:1px solid;
+        font-size: 18px;
+        background: white;
+		width:1800px;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+		overflow:hidden;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 95%;
+        object-fit: cover;
+		transition:all 0.2s linear;
+		position:relative;
+		
+ z-index:2;
+      }
+ .swiper-slide:hover img {
+       transform:scale(1.2);
+	   overflow:hidden;
+		 opacity: 0.5;
+ position:relative;
+ 
+      }
+/*배너*/
+.slideshow-container {
+  max-width:1800px;
+  height:700px
+  position: absolute;
+	margin-right:0px;
+	
+  margin-top: 122px;
+}
+
+/* effect */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 20%;	
+
+  
+  border-radius:50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0px;
+   border-radius:50%;
+}
+.prev {
+  left: 0px;
+   border-radius:50%;
+}
+
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  border-radius:50%;
+  background-color:white;
+  opacity: 0.5;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.img_c {
+	float: left;
+	width: 50%;
+	padding: 5px;
+}
+
+.ng::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+#atag{
+text-decoration:none;
+font-weight:bold;
+color: black;
+color: #BA9A5E;
+}
+.my_img {
+    filter: brightness(1);
+}
+ 
+.my_img:hover {
+    filter: brightness(0.8);
+}
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+	
+<? include "top.html"; ?>
+
+<div class="slideshow-container" >
+
+     <div class="mySlideDiv fade active">
+        <img style='width:100%;height:700px'src="배너.jpg"> 
+     </div>
+            
+     <div class="mySlideDiv fade">
+         <img style='width:100%;height:700px' src="배너1.jpg"> 
+     </div>
+            
+     <div class="mySlideDiv fade">
+         <img  style='width:100%;height:700px' src="event1.gif"> 
+     </div>
+	
+     <a class="prev" onclick="prevSlide()"><i class="fa-sharp fa-solid fa-chevron-left"></i></a>
+     <a class="next" onclick="nextSlide()"><i class="fa-sharp fa-solid fa-chevron-right"></i></a>
+            
+</div>
+
+	<center><h1 style='margin-top:100px;padding-top:50px;'>MD's pick</h1></center>
+	<center><sub><font style='color:gray;'>MD가 직접 선택한 추천 아이템들을 한 번 착용하여 보세요.</font></sub>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper" style='padding-bottom:10px;'>
+	  
+        <div class="swiper-slide"><a href='heart.php?code=RS-006'><img id='imggg' src="오렐다큐빅물고기반지.png"   ></a>
+		<div style='position:absolute; bottom:50px;'>다양한 스타일과 매치하기 좋은 심플 큐빅 물고기 반지</div></div>
+		
+        <div class="swiper-slide"><img  src="neck2.jpg">
+		<div style='position:absolute; bottom:50px;'>작지만 특별한 진주목걸이</div></div>
+       
+	   <div class="swiper-slide"><img src="neck3.jpg">
+		<div style='position:absolute; bottom:30px; '>오늘은 조금 화려하게 진주목걸이</div></div>
+		
+        <div class="swiper-slide"><img  src="bracelet1.jpg">
+		<div style='position:absolute; bottom:30px; '>영롱한 팔찌</div></div>
+        
+		<div class="swiper-slide"><a href='heart.php?code=NS-003'><img src="통통아기고래물고기목걸이.jpg"></a>
+			<div style='position:absolute; bottom:30px; '>통통 튀는 아기 돌고래 목걸이</div></div>
+        <div class="swiper-slide"><img  src="bracelet2.jpg"></div>
+        <div class="swiper-slide"><img  src="earing3.jpg"></div>
+        <div class="swiper-slide"><img src="ring2.jpg"></div>
+		<div class="swiper-slide"><img  src="ring3.jpg"></div>
+		
+      </div>
+	    <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+	
+    </div>
+	<div style='margin-top:100px;'>
+	<font style='font-size:30px;'>PROMOTION</font></div>
+	
+	<div class="ng" style='margin-top:30px;'>
+	<div class="img_c">
+		<a href='event1.php' id='atag' ><img src="프로모션1.png" 
+		style='width:92%;' class="my_img"><p>글로리 크리스마스 이벤트</a></p>
+	</div>
+	<div class="img_c" >
+		<a href='event2.php' id='atag'><img src="프로모션2.png" 
+		style='width:92%;' class="my_img"><p>물고기 아이템 컬렉션</a></p>
+	</div>
+	
+</div>
+	
+ <? include "bottom.html"; ?>
+ 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+      
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }, spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+		},
+	  });
+
+    </script>
+	
+	<script type="text/javascript">
+
+$(document).ready(function () {
+	$(".mySlideDiv").not(".active").hide(); //화면 로딩 후 첫번째 div를 제외한 나머지 숨김
+	
+	setInterval(nextSlide, 4000); //4초(4000)마다 다음 슬라이드로 넘어감
+});
+
+//이전 슬라이드
+function prevSlide() {
+	$(".mySlideDiv").hide(); //모든 div 숨김
+	var allSlide = $(".mySlideDiv"); //모든 div 객체를 변수에 저장
+	var currentIndex = 0; //현재 나타난 슬라이드의 인덱스 변수
+	
+	//반복문으로 현재 active클래스를 가진 div를 찾아 index 저장
+	$(".mySlideDiv").each(function(index,item){ 
+		if($(this).hasClass("active")) {
+			currentIndex = index;
+		}
+        
+	});
+	
+	//새롭게 나타낼 div의 index
+	var newIndex = 0;
+    
+	if(currentIndex <= 0) {
+		//현재 슬라이드의 index가 0인 경우 마지막 슬라이드로 보냄(무한반복)
+		newIndex = allSlide.length-1;
+	} else {
+		//현재 슬라이드의 index에서 한 칸 만큼 뒤로 간 index 지정
+		newIndex = currentIndex-1;
+	}
+
+	//모든 div에서 active 클래스 제거
+	$(".mySlideDiv").removeClass("active");
+    
+	//새롭게 지정한 index번째 슬라이드에 active 클래스 부여 후 show()
+	$(".mySlideDiv").eq(newIndex).addClass("active");
+	$(".mySlideDiv").eq(newIndex).show();
+
+}
+
+//다음 슬라이드
+function nextSlide() {
+	$(".mySlideDiv").hide();
+	var allSlide = $(".mySlideDiv");
+	var currentIndex = 0;
+	
+	$(".mySlideDiv").each(function(index,item){
+		if($(this).hasClass("active")) {
+			currentIndex = index;
+		}
+        
+	});
+	
+	var newIndex = 0;
+	
+	if(currentIndex >= allSlide.length-1) {
+		//현재 슬라이드 index가 마지막 순서면 0번째로 보냄(무한반복)
+		newIndex = 0;
+	} else {
+		//현재 슬라이드의 index에서 한 칸 만큼 앞으로 간 index 지정
+		newIndex = currentIndex+1;
+	}
+
+	$(".mySlideDiv").removeClass("active");
+	$(".mySlideDiv").eq(newIndex).addClass("active");
+	$(".mySlideDiv").eq(newIndex).show();
+	
+}
+
+</script>
+  </body>
+</html>
