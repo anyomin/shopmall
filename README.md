@@ -33,7 +33,8 @@
   <tr>
     <td><img width="2521" height="1317" alt="스크린샷 2025-12-27 205442" src="https://github.com/user-attachments/assets/453ce711-0a99-419d-9819-62dc269afe45" />
 </td>
-    <td><img src="docs/screenshots/product_list.png" width="430"/></td>
+    <td><img width="480" height="242" alt="image" src="https://github.com/user-attachments/assets/e5ef22a0-0838-4c95-a356-6db2c08a3f88" />
+</td>
   </tr>
 
   <tr>
@@ -41,8 +42,10 @@
     <th>후기 목록/상세</th>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/product_detail.png" width="430"/></td>
-    <td><img width="542" height="233" alt="image" src="https://github.com/user-attachments/assets/099d2273-17c0-4c35-931b-6fcafdbe29ce" />
+    <td><img width="515" height="400" alt="image" src="https://github.com/user-attachments/assets/d8a0e8c1-be80-4ab3-b64e-84222aaa8e45" />
+</td>
+    <td><img width="604" height="236" alt="image" src="https://github.com/user-attachments/assets/b6908ce6-dca9-4954-934c-3487bb3d3b69" />
+
 </td>
   </tr>
 
@@ -51,8 +54,10 @@
     <th>주문/결제</th>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/cart.png" width="430"/></td>
-    <td><img src="docs/screenshots/order.png" width="430"/></td>
+    <td><img width="401" height="290" alt="image" src="https://github.com/user-attachments/assets/70affbfa-0f80-4a07-b46a-4646c926c586" />
+</td>
+    <td><img width="427" height="372" alt="image" src="https://github.com/user-attachments/assets/f677bfb7-3cd4-4dc1-8591-319511b0b548" />
+</td>
   </tr>
 
   <tr>
@@ -60,7 +65,8 @@
     <th>마이페이지/주문내역</th>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/order_done.png" width="430"/></td>
+    <td><img width="569" height="324" alt="image" src="https://github.com/user-attachments/assets/31daddf7-8ffe-45f0-9daa-7883799180f2" />
+</td>
     <td><img width="569" height="386" alt="image" src="https://github.com/user-attachments/assets/1da83a59-bc20-46cb-aaca-b528a8dd1b62" />
 </td>
   </tr>
