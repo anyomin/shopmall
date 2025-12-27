@@ -39,7 +39,7 @@
 
 <a id="arch"></a>
 ## 🗺️ 시스템 구성도
-<img width="893" height="643" alt="image" src="https://github.com/user-attachments/assets/d18b129a-40f2-4357-b5e6-f48b9fc9b8a6" />
+<img width="836" height="546" alt="image" src="https://github.com/user-attachments/assets/ab8ae1bb-134d-441c-bdb1-68960f9a4c14" />
 
 > **Browser(HTML/CSS/JS)** → **PHP 서버(Apache)** → **MySQL**
 - 사용자/관리자 권한에 따라 기능 분리
